@@ -1,0 +1,96 @@
+var twoMultiples = [];
+
+var threeMultiples = [];
+
+var bothMultiples = [];
+
+var notTwos = [];
+
+
+var findTwos = function() {
+  
+    for (var i = 1; i <= 50; i++) {
+      
+      if (i % 2 === 0) {
+          
+          twoMultiples.push(i);
+          
+      }
+      
+      else {
+        
+        notTwos.push(i);
+        
+      }
+      
+    }
+  
+};
+
+
+var findThrees = function() {
+  
+    for (var j = 1; j <= 50; j++) {
+      
+      if ((j % 3) === 0) {
+          
+          threeMultiples.push(j);
+        
+      }
+      
+    }
+          
+};
+
+var findCommon = function() {
+  
+  var g = 0;
+  
+  var w = 0;
+  
+  for (g = 0; g <= bothMultiples.length; )
+  
+  if (twoMultiples[g] !== threeMultiples[w]) {
+    
+    do {
+    
+    g++;
+    
+    }
+    
+    while (g < w);
+    
+    do {
+      
+      w++;
+      
+    }
+    
+    while (g > w);
+  
+  }
+
+  else {
+    
+    bothMultiples.push(twoMultiples[g]);
+    
+  }
+        
+};
+
+console.log("Here's the data! :");
+
+findTwos();
+
+findThrees();
+
+findCommon();
+
+console.log("Multiples of two: " + twoMultiples);
+
+console.log("Multiples of three: " + threeMultiples);
+  
+console.log("Multiples of both two and three: " + bothMultiples);
+
+console.log("Neither multiples: " + notTwos);
+
