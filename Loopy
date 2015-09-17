@@ -1,3 +1,10 @@
+/* This loop logic test is to find the multiples of two, multiples of three,
+   and non-multiples of 2 up to the number 50 - printing them to respective arrays. 
+   After doing so, it will find matching entries between the arrays containing the multiples,
+   and print matching values (i.e. multiples of both 2 and 3) to a new array.
+*/
+
+
 var twoMultiples = [];
 
 var threeMultiples = [];
@@ -6,6 +13,7 @@ var bothMultiples = [];
 
 var notTwos = [];
 
+// This function finds multiples of 2 and non-multiples of 2, printing them to their own arrays. //
 
 var findTwos = function() {
   
@@ -27,6 +35,7 @@ var findTwos = function() {
   
 };
 
+// This function finds multiples of 3, printing them to its own array. //
 
 var findThrees = function() {
   
@@ -41,6 +50,10 @@ var findThrees = function() {
     }
           
 };
+
+// This function aims to find matching values between the arrays containing multiples of 2 and 3,
+   and should print them to a new array representing multiples of both 2 and 3.
+//
 
 var findCommon = function() {
   
@@ -78,6 +91,8 @@ var findCommon = function() {
         
 };
 
+// Execution of program into console //
+
 console.log("Here's the data! :");
 
 findTwos();
@@ -93,4 +108,3 @@ console.log("Multiples of three: " + threeMultiples);
 console.log("Multiples of both two and three: " + bothMultiples);
 
 console.log("Neither multiples: " + notTwos);
-
